@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font: normal 18pt Arial;
+        }
+        p{
+            font: normal 20pt Arial;
+            margin-top: -20px;
+        }
+        input#txtn1,#txtn2,#txtn3,#txtn3,#txtn4{
+            background-color: black;
+            color: white;
+            width: 50px;
+            font: normal 15pt Arial;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Média Aritmética</h1>
+    <p>Coloque os valores desejados: </p>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2"> +
+    <input type="number" name="txtn3" id="txtn3"> + 
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" value="calcular" onclick= "calcular()">
+    <div id = 'res'> Resultado </div>
+    <div id = 'fin'>  </div>
+    <script>
+        function calcular(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var tn3 = window.document.getElementById('txtn3')
+            var tn4 = window.document.getElementById('txtn4')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var m = (n1+n2+n3+n4)/4
+            var apr = "APROVADO"
+           var rep = "REPROVADO"
+            res.innerHTML = `A média dos valores acima é: ${m}`
+            fin.innerText = m>=6?apr:rep
+                    }
+    </script>
+</body>
+</html>
